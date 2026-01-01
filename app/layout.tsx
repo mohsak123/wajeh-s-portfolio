@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
+// import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 
-const ibmPlexSans = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-ibm-plex",
-  display: "swap",
-});
+// const ibmPlexSans = IBM_Plex_Sans({
+//   subsets: ["latin"],
+//   weight: ["300", "400", "500", "600", "700"],
+//   variable: "--font-ibm-plex",
+//   display: "swap",
+// });
 
 export const metadata: Metadata = {
   title: "Flutter Developer Portfolio",
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <body
-        className={`${ibmPlexSans.variable} font-sans antialiased bg-background text-foreground min-h-screen`}
+        className={` font-sans antialiased bg-background text-foreground min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
