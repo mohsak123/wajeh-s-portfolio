@@ -1,10 +1,15 @@
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import FadeIn from "@/utils/FadeIn"
-
+/* eslint-disable @next/next/no-img-element */
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Link from "next/link";
 
 const projects = [
   {
@@ -55,68 +60,90 @@ const projects = [
     github: "https://github.com",
     demo: "https://demo.com",
   },
-]
+];
 
-export function Projects() {
+const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-4 bg-muted/30 overflow-hidden">
-      <div className="container mx-auto max-w-6xl">
+    <section id="projects" className="py-20 bg-projects-bg transition-colors duration-300">
+      <div className="container mx-auto px-4">
 
-        <FadeIn className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Featured Projects</h2>
+        <div className="text-center mb-12 animate-fade-up">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-foreground">Featured Projects</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my recent Flutter applications, demonstrating expertise in mobile development and UI/UX
-            design.
+            A showcase of my recent Flutter applications, demonstrating expertise in mobile development and UI/UX design.
           </p>
-        </FadeIn>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <FadeIn key={index} delay={index * 0.1}>
-              <Card className="overflow-hidden group hover:shadow-lg transition-all duration-500 hover:-translate-y-2 h-full">
-                <div className="relative overflow-hidden aspect-video">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center gap-4 pb-6">
-                    <Link
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-background/90 hover:bg-primary hover:text-primary-foreground transition-colors shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-300"
-                    >
-                      <Github className="h-5 w-5" />
-                    </Link>
-                    <Link
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-background/90 hover:bg-primary hover:text-primary-foreground transition-colors shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75"
-                    >
-                      <ExternalLink className="h-5 w-5" />
-                    </Link>
-                  </div>
+            <Card
+              key={index}
+              className="bg-projects-card border-none overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group animate-fade-up flex flex-col"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="h-48 overflow-hidden relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
+              </div>
+
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <CardTitle className="text-xl font-bold text-foreground">
+                    {project.title}
+                  </CardTitle>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-2">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary" className="hover:bg-primary/10 transition-colors">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
+                <CardDescription className="text-muted-foreground/80 mt-2 line-clamp-2">
+                  {project.description}
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="mt-auto">
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <Badge
+                      key={tag}
+                      variant="secondary"
+                      className="bg-projects-bg py-1 px-2 text-foreground hover:bg-background/80"
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
                 </div>
-              </Card>
-            </FadeIn>
+              </CardContent>
+
+              <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2 pb-6 px-6">
+
+                <Link
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-fit items-center justify-center gap-2 bg-primary cursor-pointer text-primary-foreground font-semibold py-2 px-5 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.1)] hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)] hover:scale-105 transition-all duration-300 text-sm"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>View Demo</span>
+                </Link>
+
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-fit items-center border-white/10 justify-center gap-2 bg-secondary cursor-pointer border text-primary font-medium py-2 px-5 rounded-full transition-all duration-300 text-sm"
+                >
+                  <Github className="w-4 h-4" />
+                  <span>View Code</span>
+                </Link>
+
+              </CardFooter>
+            </Card>
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default Projects;
