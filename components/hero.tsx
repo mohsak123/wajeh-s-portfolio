@@ -16,12 +16,18 @@ const Hero = () => {
   ];
 
   return (
-    <section className="pb-20 pt-30 w-full flex items-center justify-center relative">
+    <section className="pb-20 pt-30 w-full flex items-center justify-center relative overflow-hidden bg-background">
 
-      <div className='absolute w-full h-full -mt-10 opacity-10'>
-        <img src="/images/bg.jpg" alt="bg" className='object-cover w-full h-full' />
-      </div>
-      <div className="relative w-full px-4 container mx-auto">
+      <img
+        src="/images/bg.jpg"
+        alt="Background"
+        className='absolute inset-0 w-full h-full object-cover z-0'
+      />
+
+      <div className="absolute inset-0 bg-background/90 z-0 backdrop-blur-[1px]"></div>
+
+
+      <div className="relative z-10 w-full px-4 container mx-auto">
 
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
@@ -70,7 +76,6 @@ const Hero = () => {
           </div>
 
           <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-xl perspective-1000 self-center">
-
             {skills.map((skill, index) => (
               <div
                 key={index}
