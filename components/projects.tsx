@@ -28,7 +28,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="bg-projects-card border-none overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group animate-fade-up flex flex-col"
+              className="bg-projects-card border-none py-0 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group animate-fade-up flex flex-col"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <Link href={`/projects/${project.id}`} className="block h-48 overflow-hidden relative cursor-pointer">

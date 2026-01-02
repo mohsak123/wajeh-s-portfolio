@@ -86,8 +86,8 @@ export function Contact() {
               <Card className="p-8 h-full">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
+                    <div className="">
+                      <label htmlFor="name" className="text-sm font-medium pb-2 inline-block">
                         Name
                       </label>
                       <Input
@@ -99,8 +99,8 @@ export function Contact() {
                         required
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
+                    <div>
+                      <label htmlFor="email" className="text-sm font-medium pb-2 inline-block">
                         Email
                       </label>
                       <Input
@@ -114,8 +114,8 @@ export function Contact() {
                       />
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">
+                  <div>
+                    <label htmlFor="subject" className="text-sm font-medium pb-2 inline-block">
                       Subject
                     </label>
                     <Input
@@ -127,8 +127,8 @@ export function Contact() {
                       required
                     />
                   </div>
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
+                  <div>
+                    <label htmlFor="message" className="text-sm font-medium pb-2 inline-block">
                       Message
                     </label>
                     <Textarea

@@ -158,7 +158,7 @@ const ProjectDetails = () => {
                   {subImages.map((img: string, index: number) => (
                     <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                       <div className="p-1">
-                        <Card className="bg-projects-card border-none overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group relative">
+                        <Card className="bg-projects-card pt-0 border-none overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group relative">
                           <CardContent className="flex aspect-9/16 items-center justify-center p-0 relative bg-muted">
                             <img
                               src={img}

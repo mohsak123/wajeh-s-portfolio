@@ -16,7 +16,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="pb-20 pt-30 w-full flex items-center justify-center relative overflow-hidden bg-background">
+    <section className="pb-12 pt-24 w-full flex items-center justify-center relative overflow-hidden bg-background">
 
       <img
         src="/images/bg.jpg"
@@ -34,7 +34,7 @@ const Hero = () => {
 
         <div className="relative z-10 flex flex-col 2xl:flex-row items-center justify-between gap-10 2xl:gap-16">
 
-          <div className="flex flex-col xl:flex-row items-center xl:items-center text-center xl:text-left gap-8 xl:gap-12 flex-1">
+          <div className="flex flex-col xl:flex-row items-center xl:items-center text-center xl:text-left gap-8 xl:gap-16 flex-1">
 
             <div className="relative group shrink-0">
               <div className="absolute -inset-1.5 bg-linear-to-r from-primary to-chart-2 rounded-full blur opacity-50 group-hover:opacity-80 transition duration-500"></div>
@@ -49,13 +49,13 @@ const Hero = () => {
 
             <div className="flex flex-col items-center xl:items-start space-y-6">
               <div className="space-y-2">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground tracking-tight leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[68px] font-bold text-foreground tracking-tight leading-tight">
                   Wajeh Al-Howari
                 </h1>
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-primary">
+                <h2 className="text-xl md:text-2xl lg:text-[26px] font-medium text-primary">
                   Flutter & Cross-Platform Developer
                 </h2>
-                <p className="text-muted-foreground max-w-xl text-base md:text-lg leading-relaxed">
+                <p className="text-muted-foreground max-w-xl text-base md:text-[16px] leading-relaxed">
                   Transforming ideas into high-performance mobile applications.
                   Expert in crafting pixel-perfect UIs and robust architectures using Flutter.
                 </p>
@@ -75,7 +75,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-xl perspective-1000 self-center">
+          <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-xl perspective-1000 self-center">
             {skills.map((skill, index) => (
               <div
                 key={index}

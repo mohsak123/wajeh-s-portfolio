@@ -2,9 +2,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 import FadeIn from "@/utils/FadeIn"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Facebook, Github, Linkedin, Mail, Twitter } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { FaWhatsapp } from "react-icons/fa6";
 
 export function Footer() {
 
@@ -41,7 +42,7 @@ export function Footer() {
 
           <FadeIn delay={0.2}>
             <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <ul className="flex flex-col lg:flex-row items-start lg:items-center justify-start gap-2 lg:gap-8">
               <li>
                 <button onClick={() => scrollToSection("projects")} className="cursor-pointer text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Projects
@@ -80,13 +81,24 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
-                href="https://twitter.com"
+                href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors hover:text-primary"
               >
-                <Twitter className="h-5 w-5" />
+                <Facebook className="h-5 w-5" />
               </Link>
+
+              <Link
+                href="https://whatsapp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors hover:text-primary"
+              >
+                
+                <FaWhatsapp className="h-5 w-5" />
+              </Link>
+
               <Link
                 href="mailto:hello@example.com"
                 className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors hover:text-primary"
