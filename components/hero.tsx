@@ -62,7 +62,7 @@ const Hero = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-2">
-                <button className="flex items-center justify-center gap-2 bg-primary cursor-pointer text-primary-foreground font-semibold py-3 px-8 rounded-full shadow-[0_0_20px_rgba(var(--primary),0.3)] hover:shadow-[0_0_30px_rgba(var(--primary),0.5)] hover:scale-105 transition-all duration-300">
+                <button className="flex items-center justify-center gap-2 shadow-lg shadow-primary/20 bg-primary cursor-pointer text-primary-foreground font-semibold py-3 px-8 rounded-full hover:shadow-[0_0_30px_rgba(var(--primary),0.5)] hover:scale-105 transition-all duration-300">
                   <Download className="w-5 h-5" />
                   <span>DOWNLOAD CV</span>
                 </button>

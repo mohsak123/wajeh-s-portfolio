@@ -69,7 +69,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 px-4 bg-projects-bg bg-muted/30 overflow-hidden">
+    <section id="contact" className="py-24 px-4 bg-projects-bg overflow-hidden">
       <div className="container mx-auto max-w-6xl">
 
         <FadeIn className="text-center mb-16">
@@ -141,7 +141,7 @@ export function Contact() {
                       required
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full">
+                  <Button type="submit" size="lg" className="w-full cursor-pointer shadow-lg shadow-primary/20">
                     Send Message
                   </Button>
                 </form>

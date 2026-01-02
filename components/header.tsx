@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { ModeToggle } from "@/components/mode-toggle"
+import Link from "next/link"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -35,12 +36,12 @@ export function Header() {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <button
-            onClick={() => scrollToSection("hero")}
+          <Link
+            href={'/'}
             className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
           >
             {"<FlutterDev />"}
-          </button>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             <button
@@ -63,7 +64,7 @@ export function Header() {
             </button>
 
             <div className="flex items-center gap-4">
-              <Button onClick={() => scrollToSection("contact")} className="cursor-pointer">
+              <Button onClick={() => scrollToSection("contact")} className="cursor-pointer shadow-lg shadow-primary/20">
                 Get in Touch
               </Button>
               <ModeToggle />
