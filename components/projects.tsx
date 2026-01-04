@@ -67,19 +67,9 @@ const Projects = () => {
                 </div>
               </CardContent>
 
-              <CardFooter className="flex items-center justify-between pt-2 pb-6 px-6">
+              <CardFooter className="flex items-center justify-between gap-4 flex-wrap pt-2 pb-6 px-6">
 
                 <div className="flex gap-3">
-                  <Link
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center shadow-lg shadow-primary/20 justify-center gap-2 bg-primary cursor-pointer text-primary-foreground font-semibold py-2 px-4 rounded-full hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)] hover:scale-105 transition-all duration-300 text-xs sm:text-sm"
-                  >
-                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
-                    <span>Demo</span>
-                  </Link>
-
                   <Link
                     href={project.github}
                     target="_blank"
@@ -88,6 +78,15 @@ const Projects = () => {
                   >
                     <Github className="w-3 h-3 sm:w-4 sm:h-4" />
                     <span>Code</span>
+                  </Link>
+                  <Link
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center shadow-lg shadow-primary/20 justify-center gap-2 bg-primary cursor-pointer text-primary-foreground font-semibold py-2 px-4 rounded-full hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)] hover:scale-105 transition-all duration-300 text-xs sm:text-sm"
+                  >
+                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <span>Demo</span>
                   </Link>
                 </div>
 
