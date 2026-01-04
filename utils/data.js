@@ -12,7 +12,7 @@ export const projects = [
     id: 2,
     title: "Fitness Tracker",
     description: "Track workouts, monitor progress, and achieve fitness goals. Features custom animations and charts.",
-    image: "/images/fitness-tracking-mobile-app-dashboard.jpg",
+    image: "/images/p1.webp",
     tags: ["Flutter", "SQLite", "Charts", "GetX"],
     github: "https://github.com",
     demo: "https://demo.com",

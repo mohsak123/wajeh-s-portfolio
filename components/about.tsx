@@ -35,8 +35,7 @@ export function About() {
         <FadeIn className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Passionate Flutter developer with 5+ years of experience building mobile applications. I specialize in
-            creating elegant, performant apps that users love.
+            Passionate Flutter developer with 3+ years of experience building mobile applications. I specialize in creating elegant, performant apps that users love.
           </p>
         </FadeIn>
 
@@ -69,18 +68,13 @@ export function About() {
               <h3 className="text-2xl font-bold mb-4">My Journey</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  I started my journey as a mobile developer in 2018, working with native Android development. When I
-                  discovered Flutter in 2019, I was amazed by its ability to create beautiful, performant apps for
-                  multiple platforms with a single codebase.
+                  I started university in 2020 and began learning Flutter and mobile development in 2022. In 2023, I started working professionally as a Flutter developer, gaining 3 years of experience building production-ready apps across e-commerce, dashboards, and social platforms
                 </p>
                 <p>
-                  Since then, I've worked on numerous projects ranging from e-commerce platforms to social media apps,
-                  always focusing on delivering exceptional user experiences and clean, maintainable code.
+                  Throughout my studies, my GPA was consistently strong, around 80, with no failed years, and I successfully graduated from university. I am currently fully available for work, with stable internet and electricity, focusing on writing clean, maintainable code and delivering exceptional user experiences
                 </p>
                 <p>
-                  I'm constantly learning new technologies and best practices to stay at the forefront of mobile
-                  development. When I'm not coding, you can find me contributing to open-source projects or writing
-                  technical articles to help other developers.
+                  I always share my experience and the problems I’ve solved on platforms like LinkedIn, and I continuously explore new technologies and best practices to stay at the forefront of mobile development. Outside of work, I enjoy contributing to open-source projects and sharing knowledge through technical articles.
                 </p>
               </div>
             </div>

@@ -159,7 +159,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-sm text-muted-foreground">hello@flutterdev.com</p>
+                    <p className="text-sm text-muted-foreground">wajihhoware@gmail.com</p>
                   </div>
                 </div>
               </Card>
@@ -173,7 +173,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-sm text-muted-foreground">+963 996972054</p>
+                    <p className="text-sm text-muted-foreground">+963 985976743</p>
                   </div>
                 </div>
               </Card>
@@ -187,7 +188,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
-                    <p className="text-sm text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-sm text-muted-foreground">Syria/Latakia</p>
                   </div>
                 </div>
               </Card>
@@ -197,7 +198,7 @@ export function Contact() {
               <Card className="p-6 bg-linear-to-br from-primary/10 to-accent/10 border-primary/20">
                 <h3 className="font-semibold mb-2">Available for Freelance</h3>
                 <p className="text-sm text-muted-foreground">
-                  I'm currently available for freelance projects and full-time opportunities.
+                  I'm currently available for full-time opportunities and freelance projects.
                 </p>
               </Card>
             </FadeIn>

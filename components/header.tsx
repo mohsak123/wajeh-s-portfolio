@@ -18,13 +18,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-      setIsMenuOpen(false)
-    }
-  }
 
   return (
     <header
@@ -43,34 +36,38 @@ export function Header() {
             {"<FlutterDev />"}
           </Link>
 
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("projects")}
+            <a
+              href={"/#projects"}
               className="cursor-pointer text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
             >
               Projects
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
+            </a>
+            <a
+              href={"/#about"}
               className="cursor-pointer text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
+            </a>
+            <a
+              href={"/#contact"}
               className="cursor-pointer text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
             >
               Contact
-            </button>
+            </a>
 
             <div className="flex items-center gap-4">
-              <Button onClick={() => scrollToSection("contact")} className="cursor-pointer shadow-lg shadow-primary/20">
-                Get in Touch
-              </Button>
+              <a href={"/#contact"}>
+                <Button className="cursor-pointer shadow-lg shadow-primary/20">
+                  Get in Touch
+                </Button>
+              </a>
               <ModeToggle />
             </div>
           </nav>
 
+          {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-2 md:hidden">
             <ModeToggle />
 
@@ -80,29 +77,35 @@ export function Header() {
           </div>
         </div>
 
+        {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4">
-            <button
-              onClick={() => scrollToSection("projects")}
+            <a
+              href="#projects"
+              onClick={() => setIsMenuOpen(false)} // نسكر القائمة لما نكبس
               className="cursor-pointer text-sm font-medium text-foreground/70 hover:text-foreground transition-colors text-left"
             >
               Projects
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
+            </a>
+            <a
+              href="#about"
+              onClick={() => setIsMenuOpen(false)}
               className="cursor-pointer text-sm font-medium text-foreground/70 hover:text-foreground transition-colors text-left"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setIsMenuOpen(false)}
               className="cursor-pointer text-sm font-medium text-foreground/70 hover:text-foreground transition-colors text-left"
             >
               Contact
-            </button>
-            <Button onClick={() => scrollToSection("contact")} className="w-full">
-              Get in Touch
-            </Button>
+            </a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)} className="w-full">
+              <Button className="w-full">
+                Get in Touch
+              </Button>
+            </a>
           </nav>
         )}
       </div>
