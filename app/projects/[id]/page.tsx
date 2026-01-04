@@ -17,6 +17,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { projects } from "@/utils/data";
 import FadeIn from "@/utils/FadeIn";
+import Image from "next/image";
 
 interface Project {
   id: number;
@@ -26,7 +27,7 @@ interface Project {
   tags: string[];
   github: string;
   demo: string;
-  subImages?: string[];
+  gallery?: string[];
   longDescription?: string;
   date?: string;
   category?: string;
@@ -48,7 +49,7 @@ const ProjectDetails = () => {
     );
   }
 
-  const subImages = project.subImages || [project.image, project.image, project.image, project.image];
+  const gallery = project.gallery || [project.image, project.image, project.image, project.image];
   const longDescription = project.longDescription || project.description;
   const date = project.date || "2024";
   const category = project.category || "Application";
@@ -155,13 +156,15 @@ const ProjectDetails = () => {
                 className="w-full max-w-4xl"
               >
                 <CarouselContent className="-ml-4">
-                  {subImages.map((img: string, index: number) => (
+                  {gallery.map((img: string, index: number) => (
                     <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                       <div className="p-1">
                         <Card className="bg-projects-card pt-0 border-none overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group relative">
                           <CardContent className="flex aspect-9/16 items-center justify-center p-0 relative bg-muted">
-                            <img
+                            <Image
                               src={img}
+                              width={1000}
+                              height={1000}
                               alt={`${project.title} Screenshot ${index + 1}`}
                               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer"
                             />
